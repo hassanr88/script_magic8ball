@@ -12,28 +12,20 @@ fn main() {
         let mut input = String::new();
         println!("Enter your question:");
         io::stdin().read_line(&mut input).expect("Failed to read line");
-        let ans1 = "Yes, definitely!";
-        let ans2 = "No, definitely not!";
-        let ans3 = "Maybe, who knows?";
-        let ans5 = "It is certain.";
-        let ans4 = "Roads lead to no.";
-        let ans6 = "Don't count on it.";
-        let ans7 = "Outlook not so good.";
-        let ans8 = "Signs point to yes.";
         if input.trim().to_lowercase() == "exit" {
             break;
         }
         let mut rng = rand::rng();
         let dice: i32 = rng.random_range(1..=8);
         match dice {
-            1 => println!("{}", ans1),
-            2 => println!("{}", ans2),
-            3 => println!("{}", ans3),
-            4 => println!("{}", ans4),
-            5 => println!("{}", ans5),
-            6 => println!("{}", ans6),
-            7 => println!("{}", ans7),
-            8 => println!("{}", ans8),
+            1 => println!("Yes, definitely!"),
+            2 => println!("No, definitely not!"),
+            3 => println!("Maybe, who knows?"),
+            4 => println!("It is certain."),
+            5 => println!("Roads lead to no."),
+            6 => println!("Don't count on it."),
+            7 => println!("Outlook not so good."),
+            8 => println!("Signs point to yes."),
             _ => println!("Invalid dice roll."),
         }
     }
